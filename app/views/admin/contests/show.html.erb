@@ -1,0 +1,37 @@
+<p>
+  <b>Name</b>
+  <%=h @contest.name %>
+</p>
+
+<p>
+  <b>Description</b>
+  <%=h @contest.description %>
+</p>
+
+<p>
+  <b>Rules</b>
+  <%=h @contest.rules %>
+</p>
+
+<p>
+  <b>Ratings</b>
+  <%=h @contest.ratings %>
+</p>
+
+<p>
+  <b>Votes</b>
+  <%=h @contest.votes %>
+</p>
+
+<p>
+  <b>Begin</b>
+  <%=h @contest.begin %>
+</p>
+
+<p>
+  <b>End</b>
+  <%=h @contest.end %>
+</p>
+
+<%= link_to 'Edit', edit_contest_path(@contest) %> |
+<%= link_to 'Back', contests_path %>

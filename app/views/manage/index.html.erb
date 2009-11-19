@@ -1,0 +1,29 @@
+<h1>Manage</h1>
+<style type="text/css">
+  dt {
+    padding-top : 1em;
+  }
+  dt a{
+/*    font-family: Georgia, "Times New Roman", Times, serif; */
+    font-variant:small-caps;
+	font-size:x-large;
+	color: #006EA6;
+    text-decoration: none;
+  }
+</style>
+<dl>  
+    <dt><%= link_to 'Pictures', pictures_path %></dt>
+    <td>Add/Edit/Remove your pictures</td>
+  
+    <dt><%= link_to 'Nominations', nominations_path %></dt>
+    <dd>Manage your Contest Nominations</dd>
+  
+    <dt><%= link_to 'Account', accounts_path %></dt>
+    <dd>Add/Edit/Remove your Account</dd>
+  
+    <dt><%= link_to 'Login Details', users_path %></dt>
+    <dd>change your username/password</dd>
+
+    <dt><%= link_to 'Contests', contests_path %></dt>
+    <dd>Contests Management</dd>
+</dl>

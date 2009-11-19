@@ -1,0 +1,5 @@
+<% @pictures.each { |picture| %>
+  <%= picture_card picture %>
+<% } %>
+
+<%= will_paginate @pictures %>

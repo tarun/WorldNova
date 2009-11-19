@@ -1,0 +1,4 @@
+<% @contests.each do |contest| %>
+  <%=render :partial => 'contest', :locals => {:contest => contest } %>
+<hr />
+<% end %>

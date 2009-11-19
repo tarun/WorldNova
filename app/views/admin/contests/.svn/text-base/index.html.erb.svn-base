@@ -1,0 +1,29 @@
+<h1>Listing contests</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Ratings</th>
+    <th>Votes</th>
+    <th>Begins</th>
+    <th>Ends</th>
+  </tr>
+
+<% @contests.each do |contest| %>
+  <tr>
+    <td><%= link_to 'Show', contest %>
+    <%= link_to 'Edit', edit_contest_path(contest) %>
+    <%= link_to 'Remove', contest, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= h contest.name %></td>
+    <td><%= h contest.ratings %></td>
+    <td><%= h contest.votes %></td>
+    <td><%= h contest.begin %></td>
+    <td><%= h contest.end %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New contest', new_contest_path %>

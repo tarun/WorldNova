@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Title      : FlashyWeb
+Version    : 1.0
+Released   : 20081102
+Description: A two-column, fixed-width and lightweight template ideal for 1024x768 resolutions. Suitable for blogs and small websites.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>World Nova - <%=  "#{controller.controller_name} / #{controller.action_name}".gsub(/\b\w/){$&.upcase}
+ %></title>
+
+    <%= javascript_include_tag :defaults %>
+    <%= stylesheet_link_tag "FlashyWeb" %>
+  </head>
+  <body>
+    <!-- Header -->
+    <%= render :partial => 'includes/header' %>
+
+    <!-- start page -->
+    <div id="page">
+        <!-- start content -->
+        <div id="content">
+          <p style="color: green"><%= flash[:notice] %></p>
+          <%= yield %>
+        </div>
+        <!-- end content -->
+
+        <!-- start sidebar -->
+        <div id="sidebar">
+          <%= yield :sidebar %>
+        </div>
+        <!-- end sidebar -->
+        <div style="clear: both;">&nbsp;</div>
+    </div>
+    <!-- end page -->
+
+    <!-- Footer -->
+    <%= render :partial => 'includes/footer' %>            
+  </body>
+</html>

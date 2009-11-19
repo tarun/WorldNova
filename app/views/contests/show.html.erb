@@ -1,0 +1,26 @@
+<%=render :partial => 'contest', :locals => {:contest => @contest } %>
+<p>
+  <b>Rules</b>
+  <%=h @contest.rules %>
+</p>
+
+<p> 
+    <b>Begin</b>
+    <%=h @contest.begin %>
+      <b>End</b>
+    <%=h @contest.end %>
+
+  <b>Ratings</b>
+  <%=h @contest.ratings %>
+  <b>Votes</b>
+  <%=h @contest.votes %>
+</p>
+
+<% @categories.each do |category| %>
+  <div>
+  <%=render :partial => 'category', :locals => {:category => category} %>
+  <%= link_to 'nominations', "/contests/#{@contest.id}/categories/#{category.id}/pictures" %>
+  <br /><br />
+  </div>
+<% end %>
+

@@ -1,0 +1,12 @@
+<p>
+  <b>Name</b>
+  <%=h @category.name %>
+</p>
+
+<p>
+  <b>Description</b>
+  <%=h @category.description %>
+</p>
+
+<%= link_to 'Edit', (@contest) ? edit_contest_category_path(@contest, @category) : edit_category_path(@category) %> |
+<%= link_to 'Back', (@contest) ? contest_categories_path(@contest) : categories_path %>

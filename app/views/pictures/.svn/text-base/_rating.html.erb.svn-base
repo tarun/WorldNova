@@ -1,0 +1,10 @@
+<% unless @rating.new_record? %>
+  <%= "Thank you for rating" %>
+<%  else %>
+  <% remote_form_for(@rating) do |rating| %>
+    <%=rating.hidden_field :picture_id, :value => picture.id %>
+    <%=rating.hidden_field :vote, :value => true %>
+    <%= rating.hidden_field :contest_category_id, :value => (ContestCategory.get_from(@contest, @category)).id %>
+    <%=rating.submit 'Vote' %>
+  <% end %>
+<% end %>

@@ -1,0 +1,16 @@
+<h1>Editing contest</h1>
+
+<% form_for(@contest) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => 'form', :locals => {:f => f } %>
+
+<%= content_tag(:h2, link_to('Manage Categories', "/admin/contests/#{@contest.id}/categories")) %>
+<br />
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @contest %> |
+<%= link_to 'Back', contests_path %>

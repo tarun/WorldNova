@@ -1,0 +1,9 @@
+  <p>
+    <%= f.label :login, 'Username' %>
+    <%= f.text_field :login %>
+  </p>
+
+  <p>
+    <%= f.label :password %>
+    <%= f.password_field :password, :value => '' %>
+  </p>

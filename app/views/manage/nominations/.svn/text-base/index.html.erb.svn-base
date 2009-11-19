@@ -1,0 +1,23 @@
+<h1>Listing nominations</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Contest Category</th>
+    <th>Picture</th>
+  </tr>
+
+<% @nominations.each do |nomination| %>
+  <tr>
+    <td><%= link_to 'Show', nomination %>
+        <%= link_to 'Edit', edit_nomination_path(nomination) %>
+        <%= link_to 'Destroy', nomination, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=h nomination.contest_category.category.name %></td>
+    <td><%=h nomination.picture.name %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New nomination', new_nomination_path %>

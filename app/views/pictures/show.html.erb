@@ -1,0 +1,13 @@
+<% @pictures.each { |picture| %>
+<div>
+  
+  <%=  content_tag(:h1, h(picture.name)) %>
+  <%= content_tag(:h3, h(picture.description)) %>
+
+  <%=image_tag(picture.image.public_filename(:frame)) %>
+
+<%=render :partial => 'rating', :locals => { :picture => picture, }%>
+</div>
+<% } %>
+<br />
+<%= will_paginate @pictures %>

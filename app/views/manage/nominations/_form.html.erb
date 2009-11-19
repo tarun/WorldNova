@@ -1,0 +1,21 @@
+  <p>
+    <%= f.label :picture, 'Picture' %>
+    <% @pictures.each {|picture| %>
+      <div>
+      <%=image_tag picture.image.public_filename(:thumb) %>
+      <%= content_tag(:label, picture.name) %>      
+      <%= radio_button_tag 'picture[id]', picture.id, (@nomination.picture_id == picture.id) %>
+      </div>
+    <% } %>    
+  </p>
+
+  <p>
+    <%= f.label :contest_category, 'Contest Category' %>
+    <%  @contest_categories.each { |contest_category| %>
+      <br />
+      <%= radio_button_tag 'contest_category[id]', contest_category.id, (@nomination.contest_category == contest_category) %>
+      <%= content_tag(:label, contest_category.name) %>
+    <%}%>
+    
+  </p>
+  

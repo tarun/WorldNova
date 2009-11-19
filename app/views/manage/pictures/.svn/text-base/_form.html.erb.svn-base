@@ -1,0 +1,14 @@
+  <p>
+    <%= f.label :name, 'Name' %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </p>
+
+  <% f.fields_for :image, @picture.image do |image| %>
+    <%= image.label 'Upload File' %>
+    <%= image.file_field :uploaded_data %>  
+  <% end %>

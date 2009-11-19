@@ -1,0 +1,12 @@
+<!-- start footer -->
+<div id="footer">
+	<div id="footer-menu">
+		<ul>
+            <li><a href="/help">help</a></li>
+			<li><a href="/about">about us</a></li>
+			<li><a href="/contact">contact us</a></li>            
+		</ul>
+	</div>
+	<p id="legal">&copy; 2009. Site by <%= link_to 'Tarun Kothuri', 'http://www.kothuri.com' %>. Look by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+</div>
+<!-- end footer -->

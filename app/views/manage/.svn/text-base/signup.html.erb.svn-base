@@ -1,0 +1,34 @@
+<% form_for :account, :url => {:action => 'register'} do |f| %>
+  <td><%= f.error_messages %>
+
+<table>
+  <tr>
+    <td><%= label :user, :login, 'Username' %></td>
+    <td><%= text_field :user, :login %></td>
+  </tr>
+
+  <tr>
+    <td><%= label :user, :password %></td>
+    <td><%= password_field :user, :password, :value => '' %></td>
+  </tr>
+  
+<tr>
+  <td><%= f.label :firstname, 'First Name' %></td>
+  <td><%= f.text_field :firstname %></td>
+</tr>
+
+<tr>
+  <td><%= f.label :lastname, 'Last Name' %></td>
+  <td><%= f.text_field :lastname %></td>
+</tr>
+
+<tr>
+  <td><%= f.label :email, 'Email' %></td>
+  <td><%= f.text_field :email %></td>
+</tr>
+</table>
+
+ 
+<p align="right"><%= f.submit 'Register' %></p>
+
+<% end %>

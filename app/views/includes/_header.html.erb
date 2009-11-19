@@ -1,0 +1,24 @@
+<!-- start header -->
+<div id="header">
+	<div id="logo">
+		<h1><a href="/">World<sup>Nova</sup></a></h1>
+		<h2>Around the World in Nova Gear</h2>
+	</div>
+	<div id="menu">
+		<ul>            
+			<li><a href="/contests">Contests</a></li>
+			<li><a href="/pictures">Pictures</a></li>
+            <% unless @logged_in_account.nil? %>
+              <li><a href="/manage">Manage</a></li>
+            <% end %>			
+            <li>
+                <% if @logged_in_account.nil? %>
+                  <a href="/login">Login / Register</a>
+                <% else %>
+                  <a href="/logout">Logout</a>
+                <% end %>
+            </li>
+        </ul>
+	</div>    
+</div>
+<!-- end header -->

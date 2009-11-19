@@ -1,0 +1,23 @@
+<h1>Listing categories</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= link_to 'Show', [@contest, category] %> |
+    <%= link_to 'Edit', ((@contest) ? edit_contest_category_path(@contest, category) : edit_category_path(category)) %> |
+    <%= link_to 'Remove', ((@contest) ? contest_category_path(@contest, category) : category_path(category)), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= h category.name %></td>
+    <td><%= h category.description %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New category', ((@contest) ? new_contest_category_path(@contest, @category) : new_category_path(@category)) %>

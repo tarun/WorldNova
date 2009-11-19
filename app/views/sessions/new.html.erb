@@ -1,0 +1,15 @@
+<h1>Login</h1>
+<form action="sessions/create" class="new_session" id="new_session" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+  <p>
+    <label for="login">Username</label>
+    <input id="login" name="login" type="text" />
+  </p>
+  <p>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" >
+  </p>
+  <p>
+    <%= submit_tag 'Login' %>&nbsp;&nbsp;<%= link_to 'Register', '/register' %>
+  </p>
+</form>
